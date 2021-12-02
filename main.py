@@ -63,6 +63,9 @@ class Blockchain():
         self.unconfirmed_transactions.append(transaction)
 
     def mine(self):
+        """
+        Once we confirm that the new block is a valid proof that satisfies the difficulty criteria we can add it to the chain.
+        """
         if not self.unconfirmed_transactions:
             return False
         
